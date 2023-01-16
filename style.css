@@ -3,6 +3,8 @@
   --clr-primary-bright-red: hsl(12, 88%, 59%);
   --clr-primary-dark-blue: hsl(228, 39%, 23%);
 
+  --clr-primary-red: hsla(9, 100%, 78%, 1);
+
   --clr-neutral-very-pale-red: hsl(13, 100%, 96%);
   --clr-neutral-very-light-gray: hsl(0, 0%, 98%);
 
@@ -33,7 +35,7 @@
 
 }
 
-@media (min-width: 50em) {
+@media (min-width: 50rem) {
   :root {
     --fs-button: var(--fs-300);
     --fs-body: var(--fs-400);
@@ -130,6 +132,73 @@ h1 {
 }
 
 /* General styling */
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  color: var(--clr-primary-dark-blue);
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--fs-primary-heading);
+  font-weight: var(--fw-bold);
+}
+
+h2 {
+  font-size: var(--fs-secondary-heading);
+  font-weight: var(--fw-bold);
+}
+
+.cta h2 {
+  color: var(--clr-neutral-very-light-gray);
+}
+
+.cta {
+  background-color: var(--clr-primary-bright-red);
+}
+
+footer {
+  background-color: var(--clr-neutral-very-dark-blue);
+}
+
+/* Button styling */ 
+.primary-button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 1.5rem;
+  padding: 0.75rem 2rem;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-button);
+  background-color: var(--clr-primary-bright-red);
+  color: var(--clr-neutral-very-light-gray);
+  box-shadow: 0 1rem 1rem -0.6rem #FF9F8E;
+}
+
+.secondary-button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 1.5rem;
+  padding: 0.75rem 2rem;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-button);
+  box-shadow: 0 1rem 1rem -0.6rem DB5943;
+  color: var(--clr-primary-bright-red);
+  background-color: var(--clr-neutral-very-light-gray);
+}
+
+.form-button {
+  box-shadow: none;
+}
+
+.primary-button:hover,
+.primary-button:focus-visible {
+  background-color: var(--clr-primary-red);
+}
+
+.secondary-button:hover,
+.secondary-button:focus-visible {
+  color: var(--clr-primary-red);
+}
 
 /* Footer styling */
 .attribution { 
