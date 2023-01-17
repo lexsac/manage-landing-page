@@ -154,11 +154,41 @@ h2 {
 }
 
 .cta {
+  position: relative; 
   background-color: var(--clr-primary-bright-red);
+  isolation: isolate;
+  text-align: center;
+}
+
+.cta::before {
+  content: '';
+  background-image: 
+    url('./images/bg-tablet-pattern.svg'),
+    url('./images/bg-tablet-pattern.svg')
+  ;
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.1;
+  background-repeat: no-repeat;
+  background-position: -2rem -5rem, 70rem -40rem;
 }
 
 footer {
   background-color: var(--clr-neutral-very-dark-blue);
+}
+
+@media (min-width: 56rem) {
+  .even-columns {
+    display: flex;
+    justify-content: space-between;
+    row-gap: 5rem;
+    align-items: center;
+  }
+  
+  .even-columns div {
+    padding: 5rem;
+  }  
 }
 
 /* Button styling */ 
