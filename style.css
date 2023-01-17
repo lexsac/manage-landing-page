@@ -35,7 +35,7 @@
 
 }
 
-@media (min-width: 50rem) {
+@media (min-width: 56rem) {
   :root {
     --fs-button: var(--fs-300);
     --fs-body: var(--fs-400);
@@ -198,6 +198,100 @@ footer {
 .secondary-button:hover,
 .secondary-button:focus-visible {
   color: var(--clr-primary-red);
+}
+
+
+/* Navigation */
+.primary-header {
+  padding-top: 2rem;
+}
+
+/* Credit: https://a11y-guidelines.orange.com/en/articles/accessible-hiding/ */
+.visually-hidden {
+  position: absolute;
+position: absolute !important;
+width: 1px !important;
+height: 1px !important;
+padding: 0 !important;
+margin: -1px !important;
+overflow: hidden !important;
+clip: rect(0,0,0,0) !important;
+white-space: nowrap !important;
+border: 0 !important;
+}
+
+.primary-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  gap: 3rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-very-dark-blue);
+}
+
+/* .nav-list a:hover,
+.nav-list a:focus {
+  color: var(--clr-neutral-dark-grayish-blue);
+} */
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media (max-width: 56rem) {
+  .primary-nav-button {
+    display: none;
+  }
+
+  .header-nav {
+    display: none;
+
+    background-color: var(--clr-neutral-very-light-gray);
+    border-radius: 0.1rem;
+    inset: 7rem 1rem auto;
+    color: var(--clr-neutral-very-dark-blue);
+    font-size: var(--fs-300);
+    position: absolute;
+    /* padding: 2rem; */
+  }
+
+  /* .header-nav::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(red, blue);
+  } */
+  
+  .nav-list {
+    display: grid;
+    gap: 2rem;
+    text-align: center;
+    font-weight: var(--fw-bold);
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+  }
+
+  .mobile-nav-toggle .icon-close {
+    display: none;
+  }
+
+  .is-opened {
+    display: grid;
+  }
+
+  .is-closed {
+    display: none;
+  }
+
 }
 
 /* Footer styling */
